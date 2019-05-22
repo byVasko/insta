@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<h1 class="text-center"><%= link_to 'New Post', new_post_path, class:"btn btn-outline-dark text-left", style:"Text-decoration: none" %>Posts</h1>
+<hr>
+<div class="user-images">
+  <% @posts.each do |post| %>
+  <div class="wrapper">
+    <a href=<%= post_path(post) %>>
+    <%= image_tag post.avatar.url %>
+    </a>
+  </div>
+  <% end %>
+</div>

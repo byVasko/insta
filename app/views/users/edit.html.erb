@@ -1,0 +1,15 @@
+<%= form_with model: current_user, local: true, html: { multipart: true} do |f| %>
+<p><%=current_user.username %></p><br>
+<%= f.label :name %><br>
+<%= f.text_field :name %><br>
+<%= f.label :username %><br>
+<%= f.text_field :username %><br>
+<%= f.label :bio %><br>
+<%= f.text_area :bio %><br>
+<%= f.label :email %><br>
+<%= f.text_field :email %><br>
+<%= f.label :phone %><br>
+<%= f.text_field :phone %><br>
+<%= f.file_field :avatar %>
+<%= f.submit "Submit" %> 
+<% end %>
